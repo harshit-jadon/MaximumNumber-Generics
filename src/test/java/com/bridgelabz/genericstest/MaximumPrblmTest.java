@@ -7,7 +7,7 @@ import org.junit.Test;
 public class MaximumPrblmTest {
     @Test
     public void toTest1stNumberIsMaximum() {
-        Integer result = MaximumProblem.maximumNumber(4,2,0);
+        MaximumProblem.maximumNumber(4,2,0);
         Assert.assertEquals(4,result);
     }
     @Test
