@@ -20,7 +20,6 @@ public class MaximumPrblmTest {
         Integer result = MaximumProblem.maximumNumber(4,6,8);
         Assert.assertEquals(8,result);
     }
-
     @Test
     public void toTest1stFloatIsMaximum() {
         Float result = MaximumProblem.maximumNumber(4.5f,2.5f,0.5f);
@@ -33,6 +32,23 @@ public class MaximumPrblmTest {
     }
     @Test
     public void toTest3stFloatIsMaximum() {
-        Float result = MaximumProblem.maximumNumber(4.5f,6.5f,8.5f);
-        Assert.assertEquals(8.5f,result);
+        Float result = MaximumProblem.maximumNumber(4.5f, 6.5f, 8.5f);
+        Assert.assertEquals(8.5f, result);
+    }
+    @Test
+    public void toTest1stStringIsMaximum() {
+        String result = MaximumProblem.maximumNumber("Banana","Apple","Peach");
+        Assert.assertEquals("Banana",result);
+    }
+    @Test
+    public void toTest2stStringIsMaximum() {
+        String result = MaximumProblem.maximumNumber("Apple","Banana","Peach");
+        Assert.assertEquals("Banana",result);
+    }
+    @Test
+    public void toTest3stStringIsMaximum() {
+        String result = MaximumProblem.maximumNumber("Apple","Peach","Banana");
+        Assert.assertEquals("Banana",result);
+    }
+
 }
