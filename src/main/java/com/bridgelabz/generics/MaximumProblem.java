@@ -1,6 +1,10 @@
 package com.bridgelabz.generics;
 
-    public class MaximumProblem <E extends Comparable>{
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MaximumProblem <E extends Comparable>{
         E xElement;
         E yElement;
         E zElement;
@@ -22,6 +26,11 @@ package com.bridgelabz.generics;
             max =z;
         return max;
     }
+        @SafeVarargs
+        public static <E extends Comparable> E maxParameters(E... elements){
+            List<E> sortElements = Arrays.stream(elements).sorted().collect(Collectors.toList());
+            return sortElements.get(sortElements.size()-1);
+        }
 
     public static void main(String[] args) {
         System.out.println("Welcome to Find Maximum problem using Generics");
